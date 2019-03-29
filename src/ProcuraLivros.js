@@ -9,7 +9,6 @@ class SearchBooks extends React.Component {
         searchResults: []
     }
 
-    //Keeps track of the input value
     search = (e) => {
         const query = e.target.value;
         if (!query) {
@@ -17,7 +16,7 @@ class SearchBooks extends React.Component {
             return;
         }
 
-        //Call to the search API
+        //Chama a API de busca
         BooksAPI
             .search(query, 20)
             .then(searchResults => {
@@ -25,8 +24,7 @@ class SearchBooks extends React.Component {
                     this.setState({searchResults: []});
                     return;
                 }
-                // map over the books returned from the search API, and check if they are on the
-                // shelf or not
+                // Função que mapeia os resultados do array e depois os compara para de colocar de acordo com a bancada
                 searchResults = searchResults.map((book) => {
                     const bookOnShelf = this
                         .props
@@ -48,12 +46,12 @@ class SearchBooks extends React.Component {
                 <div className="search-books-bar">
                     <Link className="close-search" to="/">Close</Link>
                     <div className="search-books-input-wrapper">
-                        <DebounceInput
-                            minLength={2}
+                        <DebounceInput //Componente que renderiza a pesquisa enquanto o usuário está digitando
+                            minLength={1}
                             debounceTimeout={325}
                             element="input"
                             type="text"
-                            placeholder="Search by title or author"
+                            placeholder="Pesquise pelo título ou pelo autor"
                             onChange={this.search}/>
                     </div>
                 </div>

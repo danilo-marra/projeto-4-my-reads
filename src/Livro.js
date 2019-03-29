@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Book extends React.Component{
-     //Handles select input on book, to change the bookshelf.
+     //Método que troca a bancada dependendo da seleção do livro (lendo, quero ler, lido, cancelar)
      ShelfChanger = (e) => {
         const shelf = e.target.value;
         this.props.onShelfChange(this.props.book, shelf);
@@ -24,7 +24,7 @@ class Book extends React.Component{
                     }}/>
                     <div className="book-shelf-changer">
                         <select onChange={this.ShelfChanger} value={book.shelf}>
-                            <option value="none" disabled>Move to...</option>
+                            <option value="none" disabled>Mover para: </option>
                             <option value="currentlyReading">Lendo</option>
                             <option value="wantToRead">Quero Ler</option>
                             <option value="read">Lido</option>
@@ -33,7 +33,7 @@ class Book extends React.Component{
                      </div>
                  </div>
                 <div className="book-title">{book.title}</div>
-                <div className="book-authors">{book.authors.join(", ")}</div>
+                <div className="book-authors">{book.authors}</div> 
             </div>
    )
   }   

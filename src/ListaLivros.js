@@ -6,7 +6,7 @@ function ListBooks(props){
 
    const { onShelfChange } = props;
 
-   //Filter the books according to the shelf they belong to.
+   //Filtra os livros de acordo com a bancada que cada um pertence
    const currentlyReading = props.books.filter((book) => book.shelf === 'currentlyReading')
    const wantToRead =props.books.filter((book) => book.shelf === 'wantToRead')
    const read =props.books.filter((book) => book.shelf === 'read')
@@ -35,7 +35,7 @@ function ListBooks(props){
         </div>
       </div>
          <div className="open-search">
-            <Link to="/search">Add a book</Link>
+            <Link to="/search">Adicionar um livro</Link>
         </div>
     </div>
   )

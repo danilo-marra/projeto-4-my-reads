@@ -10,7 +10,7 @@ class BooksApp extends React.Component {
     books: []
   }
 
-  //API call to get the books that are on the shelfs
+  //Usando a API para dar um GET ALL em todos os livros
   componentDidMount() {
     BooksAPI
       .getAll()
@@ -19,7 +19,7 @@ class BooksApp extends React.Component {
       })
   }
 
-  //Pass the book and shelf to a function, to move the book to a shelf.
+  //Altera o stado dependendo de onde o livro é colocado na bancada
   onShelfChange = (book, shelf) => {
     book.shelf = shelf
     this.setState(state => ({
