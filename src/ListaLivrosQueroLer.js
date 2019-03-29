@@ -2,7 +2,6 @@ import React from 'react'
 
 function ListaLivrosQueroLer (props) {
     return (
-
         <div className="bookshelf">
                       <h2 className="bookshelf-title">Livros que quero ler</h2>
                       <div className="bookshelf-books">
