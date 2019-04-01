@@ -19,7 +19,7 @@ class BooksApp extends React.Component {
       })
   }
 
-  //Altera o stado dependendo de onde o livro é colocado na bancada
+  //Altera o state dependendo de onde o livro é colocado na bancada
   onShelfChange = (book, shelf) => {
     book.shelf = shelf
     this.setState(state => ({
