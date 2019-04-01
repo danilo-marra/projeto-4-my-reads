@@ -31,7 +31,7 @@ No projeto MyReads, você criará uma aplicação de estante de livros que permi
 * Faça o download como arquivo .zip ou clone este projeto:
 
     ```
-    $ git clone https://github.com/gadernal/Projeto-03-Restaurante.git
+    $ git clone https://github.com/gadernal/projeto-4-my-reads
     ```
 
 * Instale as dependência NPM via terminal 
